@@ -7,6 +7,10 @@ var extractPlugin = new ExtractTextPlugin({
 })
 
 module.exports = {
+	devServer: {
+        inline:true,
+        port: 8080
+    },
 	entry: './public/javascripts/index.js',
 	output: {
 		path: __dirname + '/public/dist',
@@ -14,7 +18,6 @@ module.exports = {
 		publicPath: '/public/dist',
 	    library: 'bundle',
 		libraryTarget: 'var'
-
 	},
 	module: {
 		rules: [
